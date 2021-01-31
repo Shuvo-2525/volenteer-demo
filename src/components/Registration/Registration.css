@@ -1,0 +1,35 @@
+.box{
+    border: 1px solid black;
+    min-height: 100vh;
+}
+
+.inner-box{
+    height: 500px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 30px;
+    border: 1px solid black;
+    padding: 5%;
+}
+
+.in-box{
+    min-height: 100%;
+    justify-content: center;
+}
+
+
+
+#date {
+    width:  220px;
+    border: 1px solid red;
+    cursor: pointer;
+    margin-bottom: 5px;
+    padding: 5px;
+    transition: .5s;
+}
+
+#date:hover {
+    background-color: rgba(255, 0, 0, 0.671);
+    transition: .5s;
+}
+
