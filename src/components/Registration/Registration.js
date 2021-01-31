@@ -17,53 +17,15 @@ const Registration = () => {
     const [loggedInUser , setLoggedInUser] = useContext(UserContext)
 
 
-    const handleRegistration = (e) => {
-
-        
+    const handleRegistration = (e) => {        
         
         const descriptions = document.getElementById("description").value;
-        let setDate = document.getElementById('date').value;
-
-        
+        let setDate = document.getElementById('date').value;        
         
         const addDesript = {...loggedInUser};
         addDesript.description = descriptions;
         addDesript.date = setDate;
-
-        var r = window.confirm("Press a button!");
-
-        if ( r === true ) {
-            setLoggedInUser(addDesript);
-        }
-
-        else {
-            e.preventDefault() ;
-        }
-
-//         if (addDesript.description === "" && addDesript.date === "") {
-           
-//             setLoggedInUser(addDesript);
-//         }
-        
-// else {
-    
-//     alert(` "Please Click the Submit registration button again to submit!!!" 
-//     <br> <br> <hr>
-    
-//     ${addDesript.description} , ${addDesript.date}  `)
-
-//     setLoggedInUser(addDesript);
-    
-   
-// }
-        
-        
-
-      
-
-       
-
-        console.log(loggedInUser);
+        setLoggedInUser(addDesript)  
 
        
         fetch('http://localhost:5000/volenteer/data' , {
@@ -73,7 +35,7 @@ const Registration = () => {
         })
 
        
-        // e.preventDefault()
+        e.preventDefault()
     }
 
     const [startDate, setStartDate] = useState(
